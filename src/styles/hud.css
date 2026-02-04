@@ -1,0 +1,38 @@
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--pad-md);
+    margin: 0 auto;
+}
+
+.hud-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    gap: 1rem;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-size), 1fr));
+    gap: var(--card-gap);
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: calc(5 * var(--card-max-size) + 4 * var(--card-gap));
+    margin: 0 auto;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}

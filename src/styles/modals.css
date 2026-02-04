@@ -1,0 +1,53 @@
+.modal-overlay, .result-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content, .result-card {
+    background: rgba(20, 20, 40, 0.95);
+    padding: 2.5rem;
+    text-align: center;
+    width: 450px;
+    min-height: 550px;
+    clip-path: var(--pixel-clip);
+    box-shadow:
+            0 0 0 4px var(--clr-card-foreground),
+            0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.modal-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-body .tile-card {
+    width: 220px;
+    height: 275px;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.tooltip-text {
+    color: #aaa;
+    font-style: italic;
+    margin-top: 0.5rem;
+}

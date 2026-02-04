@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "PixelGameFont";
+    src: url("/fonts/TerrariaFont.TTF") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Цвета карточек */
+    --clr-card-background: rgba(35, 39, 72, 0.8);
+    --clr-card-foreground: #2f2f6b;
+    --text-highlight: #fed600;
+    --text-on-dark: #eaf4ff;
+
+    /* Отступы и расположение */
+    --step: 5px;
+    --card-min-size: 150px;
+    --card-fluid-size: 15svw;
+    --card-max-size: 220px;
+    --card-gap: clamp(16px, 5vw, 48px);
+    --inner-card-ratio: 1.2;
+    --pad-sm: 10px;
+    --pad-md: 20px;
+
+    /* Кнопки */
+    --btn-font-size: clamp(1rem, 2vw, 2rem);
+    --btn-shadow: 0 0 4px #1a2b4d;
+
+    /* Эффекты карточек */
+    --card-outline: 0 0 0 2px rgba(0,0,0,0.5);
+    --card-inset: inset 0 0 0 2px rgba(255,255,255,0.1);
+
+    /* Пиксилизация йоу */
+    --pixel-clip: polygon(
+            0 var(--step), var(--step) var(--step), var(--step) 0,
+            calc(100% - var(--step)) 0, calc(100% - var(--step)) var(--step), 100% var(--step),
+            100% calc(100% - var(--step)), calc(100% - var(--step)) calc(100% - var(--step)), calc(100% - var(--step)) 100%,
+            var(--step) 100%, var(--step) calc(100% - var(--step)), 0 calc(100% - var(--step))
+    );
+}
